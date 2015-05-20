@@ -1,0 +1,32 @@
+[ 
+  { "category" : "overview", "SQL" : "select * from SYSIBMADM.MON_DB_SUMMARY", 
+                            "result" : "row", 
+                            "value_metrics" : "", 
+                            "counter_metrics" : ""
+  },
+  { "category" : "connection_overview", "SQL" : "select count(*) as connections from SYSIBMADM.MON_CONNECTION_SUMMARY", 
+                            "result" : "row", 
+                            "value_metrics" : "", 
+                            "counter_metrics" : ""
+  },
+  { "category" : "sql_overview", "SQL" : "select count(*) as SQL_statements from SYSIBMADM.MON_CURRENT_SQL", 
+                            "result" : "row", 
+                            "value_metrics" : "", 
+                            "counter_metrics" : ""
+  },
+  { "category" : "bufferpool", "SQL" : "select * from SYSIBMADM.MON_BP_UTILIZATION", 
+                            "result" : "set", 
+                            "value_metrics" : "", 
+                            "counter_metrics" : ""
+  },
+  { "category" : "tablespace", "SQL" : "select * from SYSIBMADM.MON_TBSP_UTILIZATION", 
+                            "result" : "set", 
+                            "value_metrics" : "", 
+                            "counter_metrics" : ""
+  },
+  { "category" : "HADR", "SQL" : "select STANDBY_ID,HADR_STATE,HADR_CONNECT_STATUS,TIME_SINCE_LAST_RECV,HADR_LOG_GAP from table (mon_get_hadr(NULL))", 
+                            "result" : "set", 
+                            "value_metrics" : "", 
+                            "counter_metrics" : ""
+  }
+]

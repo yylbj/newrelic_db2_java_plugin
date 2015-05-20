@@ -1,0 +1,12 @@
+{
+  "agents": [
+    {
+      "name"    : "UCD_DB2_Monitor",
+      "host"    : "localhost:50000",
+      "database": "testdb",
+      "metrics" : "overview,bufferpool,HADR",
+      "user"    : "db2inst1",
+      "passwd"  : "passw0rd"
+    }
+  ]
+}
